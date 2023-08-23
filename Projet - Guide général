@@ -1,0 +1,69 @@
+Le projet consiste à programmer un quizz sous python, sur le thème des jeux vidéo.
+
+Organisation du projet : Step by step 
+Identification des contraintes et des objectifs primaires et secondaires. Tri par priorité de ces dits objectifs. 
+Découpage en tâches et en sous-tâches à effectuer.
+Mise en place d’un moyen de suivi de notre avancement et répartition des tâches. 
+Etude fonctionnelle et technique : quelle fonction pour faire quoi ? 
+Architecture du logiciel et structuration de la base de données. 
+Développement logiciel.
+
+Objectifs
+Créer un logiciel fonctionnel et user friendly, correspondant aux contraintes techniques demandées par le client.
+- Base de données contenant toutes les questions possibles existantes.
+- Ajout de données temporaires compilant les réponses choisies par l’utilisateur.
+- Maintenabilité/ évolutivité. Possibilité de simplement maintenir et faire évoluer le soft.
+- Sélectionner en Bdd des questions différentes pour chaque partie, aléatoirement.
+Y ajouter des caractéristiques spécifiques supplémentaires qui donnent une plus-value au logiciel, sans entraver pour autant son fonctionnement initial ni complexifier inutilement son utilisation. 
+Créer un manuel d’utilisation - “règles du jeu” - qui permettra aux utilisateurs de s’y référer en cas de difficulté.
+
+Caractéristiques
+  Règles basiques
+  - Minimum 10 questions avec chacune un nombre de points et un temps imparti.
+  - Scores au fur et à mesure et score final donc stockage des résultats et incrémentation.
+  - Temps réalisé par question et au total en fin de partie. 
+      - ET temps à respecter avant échec de la question. 
+      - ET temps enregistré pour chaque question avec la date de la réponse
+  Améliorations choisies 
+  - Interface graphique
+  - Système multijoueur
+  - Niveaux de difficulté
+  - Question bonus (en cas de win streak)
+  Améliorations supplémentaires
+  - Menu des high scores
+  - Win streak (nombre de points qui augmente par question si on fait des séries de bonnes réponses d’affilée - si 5 bonnes réponses d’affilée passer à une question bonus plus dure qui donne masse de points)
+
+A TOUT MOMENT on peut quitter.
+
+  Analyse fonctionnelle 
+
+//TODO
+Ici mettre la bête à corne
+
+Cas d’utilisation de base - 
+
+Cas d’utilisation détails - 
+
+Partie base de données : 
+  - Prendre toutes les questions dans la BDD et les stocker dans une variable type ‘liste’. De même avec les réponses dans une autre variable.
+  - En fonction du choix des joueurs, prendre dans la variable liste les questions correspondant à la catégorie demandée. 
+  - Déterminer si la réponse donnée par le joueur correspond à la réponse attendue.
+
+Partie temporalité :
+  - Programmer un chronomètre
+  - Historiciser les parties (tel joueur a joué tel jour).
+
+Partie scores :
+Stocker : 
+    - les points de chaque joueur. Afficher au fur et à mesure de la progression les points. 
+    - le nombre de bonnes réponses de chaque joueur (pour la fin de la partie).
+    - le nombre de bonnes réponses à la suite de chaque joueur.
+  - Condition qui permet d’accéder à la question bonus si 5 bonnes réponses d’affilée (fenêtre supplémentaire). 
+  - A la fin de la partie afficher le score détaillé.
+  - Également entrer le nom de la personne qui a gagné en fonction du nombre de points max “... a gagné”,et qui est de le deuxième, troisième et quatrième.
+  - Avoir un classement “High Scores” avec les meilleurs scores ?
+
+Partie ordre :
+  - Chaque joueur répond l’un après l’autre aux questions toujours dans le même ordre.
+  - Fonction pour choisir de façon aléatoire les questions qui sortent.
+
